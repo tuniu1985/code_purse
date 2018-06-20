@@ -51,8 +51,8 @@ function pip_prepare(){
 function create_virtualenv(){
 	cd $OUTMAN_HOME/py_env
 	rm -rf $ENV_NAME
-	$OUTMAN_HOME/env/python-2.7/bin/virtualenv $ENV_NAME
-	source $OUTMAN_HOME/env/$ENV_NAME/bin/activate
+	$OUTMAN_HOME/py_env/python-2.7/bin/virtualenv $ENV_NAME
+	source $OUTMAN_HOME/py_env/$ENV_NAME/bin/activate
 }
 
 ##修改用户profile
@@ -101,7 +101,7 @@ function main(){
 # no_profile: do not add outman py to user profile
 export PIP_DEFAULT_TIMEOUT=60
 main $1 
-source $OUTMAN_HOME/env/$ENV_NAME/bin/activate
+source $OUTMAN_HOME/py_env/$ENV_NAME/bin/activate
 
 
 
