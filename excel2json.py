@@ -17,10 +17,11 @@ def Excel2Json(file_path):
         book = get_data(file_path)
         #抓取所有sheet页的名称
         worksheets = book.sheet_names()
-        print "该Excel包含的表单列表为：\n"
+        #print "该Excel包含的表单列表为：\n"
         for sheet in worksheets:
             print ('%s,%s' %(worksheets.index(sheet),sheet))
-        inp = raw_input(u'请输入表单名对应的编号，对应表单将自动转为json:\n')
+        #inp = raw_input(u'请输入表单名对应的编号，对应表单将自动转为json:\n')
+        inp='0'
         sheet = book.sheet_by_index(int(inp))
         row_0 = sheet.row(0)     #第一行是表单标题
         nrows=sheet.nrows       #行号
